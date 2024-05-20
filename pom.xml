@@ -106,6 +106,14 @@
 			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.ninja-squad/DbSetup -->
+        <dependency>
+            <groupId>com.ninja-squad</groupId>
+            <artifactId>DbSetup</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+
 		<!-- Only required to run tests in an IDE that bundles an older version -->
 		<dependency>
 			<groupId>org.junit.platform</groupId>
