@@ -77,6 +77,8 @@ public class CustomerSaleDeliveryTest {
 
             saleIdField.setValueAttribute(saleId);
             addressIdField.setValueAttribute("1"); // Assuming address ID 1
+            
+            // Bug: can add addresses that do not exist
 
             HtmlSubmitInput addDeliveryButton = addDeliveryForm.getInputByValue("Insert");
             HtmlPage deliveryResultPage = addDeliveryButton.click();
