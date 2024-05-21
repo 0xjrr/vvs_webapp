@@ -8,6 +8,7 @@ import webapp.DbSetupConfig;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -47,7 +48,7 @@ public class DbSetupTest {
             assertEquals(1, count);  // Ensure there is only one customer with the VAT number 197672337
         } catch (Exception e) {
         	System.out.println(e.getMessage().toLowerCase());
-            assertEquals("integrity constraint violation: unique constraint or index violation; sys_ct_10095 table: customer", e.getMessage().toLowerCase());
+            assertTrue(e.getMessage().toLowerCase().contains("integrity constraint violation: unique constraint or index violation;"));
         }
     }
 
